@@ -1,0 +1,52 @@
+
+.logo img{
+ height: 60px;
+width: 150px;
+}
+.logo{
+    width: 30%;
+}
+
+.navbar{
+    display:flex;
+    margin:auto;
+    height: 62px;
+    justify-content: space-between;
+    width: 100%;
+    gap:40px;
+    border:1px solid black;
+  
+
+
+}
+.main{
+     margin: auto;
+    width: 100%;
+    border:1px solid rgb(197, 189, 189);
+}
+.options{
+    display: flex;
+    gap:15px;
+    margin:auto;
+    width: 50%;
+    font-size: 18px;
+}
+
+.search{
+    display:flex;
+    justify-content: space-between;
+    width: 50%;
+}
+.search >button{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+.search>button{
+ width: 100px;
+}
+.user{
+  width: 15%;
+  margin-top: -14px;
+}
+

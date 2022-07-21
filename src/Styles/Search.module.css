@@ -1,0 +1,9 @@
+.box{
+    margin:auto;
+    margin-top: 10px;
+    width: 80%;
+    display: flex;
+}
+.box input{
+    width: 80%;
+}

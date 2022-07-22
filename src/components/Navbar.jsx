@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
+import {RemoveScroll} from "react-remove-scroll"
 import { Tabs, TabList, TabPanels, Tab, TabPanel, Box } from '@chakra-ui/react'
 import Allroutes from '../Routes/Allroutes'
 import { NavLink } from 'react-router-dom'
 import styles from "../Styles/Navbar.module.css"
 import Search from './Search'
 import { FaBeer, FaPiggyBank, FaRegUserCircle, FaSearch, FaUserAlt } from 'react-icons/fa';
+import { useDispatch } from 'react-redux'
 const active = {
     backgroundColor: "brown",
     color:"rgb(197, 189, 189)",
@@ -27,16 +29,17 @@ const active = {
   };
 const stylesnav = ({ isActive }) => (isActive ? active : base);
 const Navbar = () => {
+  const dispatch=useDispatch()
     const [search,setsearch]=useState(false)
     const [query,setquery]=useState(false)
   return (
    <div className={styles.main}>
      <div className={styles.navbar}>
          <div className={styles.logo}>
-             <NavLink to="/" onClick={()=>{setsearch(false),setquery(false)}}><Box><img src="https://assets.milaap.org/assets/milaap-logo-tiny-4d3dbc4e55c2aaec351f0f376329c624236c4d6266b910f472684e70603f600d.png"></img></Box></NavLink>
+             <NavLink to="/" onClick={()=>{setsearch(false),setquery(false),dispatch({type:"Cleardata"})}}><Box><img src="https://assets.milaap.org/assets/milaap-logo-tiny-4d3dbc4e55c2aaec351f0f376329c624236c4d6266b910f472684e70603f600d.png"></img></Box></NavLink>
           </div>
        <div className={styles.options}>
-            <NavLink style={stylesnav} to="/" onClick={()=>{setsearch(false),setquery(false)}}>
+            <NavLink style={stylesnav} to="/" onClick={()=>{setsearch(false),setquery(false),dispatch({type:"Cleardata"})}}>
           Home
             </NavLink>
             <NavLink style={stylesnav} to="/donate" onClick={()=>{setquery(true),setsearch(false)}}>Donate</NavLink>
@@ -60,8 +63,11 @@ const Navbar = () => {
     <div>{
  query&& search ? <Search/>:<div></div>
 }</div>
-    
+
+    <div className={styles.router}>
     <Allroutes/>
+    </div>
+  
    </div>
   )
 }

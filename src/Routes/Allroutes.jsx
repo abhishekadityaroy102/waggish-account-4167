@@ -7,11 +7,13 @@ import Lend from '../components/Lend'
 import Login from '../components/Login'
 import Pricing from '../components/Pricing'
 import Startfund from '../components/Startfund'
+import Donatenow from '../DonateNow/Donatenow'
 const Allroutes = () => {
   return (
     <Routes>
         <Route path="/" element={<Home/>}></Route>
         <Route path="/donate" element={<Donate/>}></Route>
+        <Route path="/donate/:id" element={<Donatenow/>}></Route>
         <Route path="/lend" element={<Lend/>}></Route>
         <Route path="/pricing" element={<Pricing/>}></Route>
         <Route path="/startfund" element={<Startfund/>}></Route>

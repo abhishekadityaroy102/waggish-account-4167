@@ -5,6 +5,9 @@ import styles from "../Styles/Home.module.css"
 import Search from './Search'
 import { useSelector } from 'react-redux'
 import { Navigate, useNavigate } from 'react-router-dom'
+import Categoery from '../categories/Categoery'
+import Homesearch from './Homesearch'
+import Donatenow from '../DonateNow/Donatenow'
 const Home = () => {
   const navigate=useNavigate()
   const data=useSelector((state)=>state.data)
@@ -18,13 +21,16 @@ const Home = () => {
   return (
     <div>
      <div>front page</div>
-     <div><Search/></div>
-     <div>Type search</div>
+     <div><Homesearch/></div>
+     <div>
+      <Categoery/>
+     </div>
      <div className={styles.container}>
       {
         data1.map((el)=><Containerbox el={el}/>)
       }
      </div>
+     <Donatenow/>
     </div>
   )
 }

@@ -1,0 +1,17 @@
+.Homesearch{
+    display: flex;
+    width: 57%;
+    margin:auto;
+    border:1px solid black;
+    border-radius: 8px;
+    justify-content: space-between;
+    padding-right: 10px;
+    background-color: brown;
+}
+.Homesearch input{
+    
+    width: 800px;
+    height: 40px;
+    border-radius: 8px;
+    border:none;
+}

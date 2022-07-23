@@ -14,3 +14,6 @@ export const getanimaldata=()=>{
 export const updatedata=(id,newamount)=>{
     return axios.patch(`https://62d6682d15ad24cbf2d6869c.mockapi.io/city/${id}`,{Total_amount:Total_amount+newamount})
 }
+export const getiddata=(id)=>{
+    return axios.get(`https://62d6682d15ad24cbf2d6869c.mockapi.io/city/${id}`)
+}

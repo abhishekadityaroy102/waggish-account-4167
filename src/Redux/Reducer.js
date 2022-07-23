@@ -1,5 +1,6 @@
 const initalvalue={
-    data:[]
+    data:[],
+    donatedata:[]
 }
 export const Reducer=(state=initalvalue,{type,payload})=>{
     console.log("reducer data",payload,type)
@@ -15,6 +16,11 @@ export const Reducer=(state=initalvalue,{type,payload})=>{
         }
         case "Cleardata":{
             return {...state,data:[]}
+        }
+        case "Getid":{
+            return {
+                ...state,donatedata:[payload]
+            }
         }
         default:return state
     }

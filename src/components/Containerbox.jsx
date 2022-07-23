@@ -1,9 +1,12 @@
 import { CircularProgress, CircularProgressLabel } from '@chakra-ui/react'
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import { Getiddataaction } from '../Redux/Action'
 import styles from "../Styles/Donate.module.css"
 const Containerbox = ({el}) => {
+  const dispatch=useDispatch()
   return (
-    <div className={styles.box}>
+    <div className={styles.box} onClick={()=>Getiddataaction(el.id,dispatch)}>
             <div className={styles.imagebox}>
             <img src={el.avatar}/>
             </div>

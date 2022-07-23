@@ -20,11 +20,13 @@ const Search = () => {
   },[text])
   console.log("search",data)
   return (
+    <div className={styles.search}>
     <div className={styles.box} >
       
       <Input  isInvalid
     errorBorderColor='red.300' type="search" placeholder='search by name, place or location' onChange={handlechange}></Input>
    <FcSearch style={{fontSize:"35px"}}/>
+    </div>
     </div>
   )
 }

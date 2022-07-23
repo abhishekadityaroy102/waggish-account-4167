@@ -16,6 +16,7 @@ margin-top: 5px;
     display: flex;
     width: 350px;
     margin:auto;
+    /* margin-top: 50px; */
     justify-content: space-between;
     
 }
@@ -25,7 +26,7 @@ margin-top: 5px;
 .main{
     display: flex;
     margin:auto;
-    margin-top:15px;
+    margin-top:65px;
     flex-wrap: wrap;
     width: 80%;
     gap:30px;
@@ -33,7 +34,11 @@ margin-top: 5px;
 }
 .donatebox{
     margin:auto;
+    margin-top: 150px;
   
 }
-
+.middle{
+    height: 50px;
+    width: 100%;
+}
 

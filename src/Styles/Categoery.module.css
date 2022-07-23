@@ -1,0 +1,24 @@
+.categorybox{
+    display: flex;
+    width: 70%;
+    margin:auto;
+    margin-top:20px;
+    justify-content: space-evenly;
+    
+}
+.categorybox>div{
+    /* border: 1px solid black; */
+    height: 120px;
+    width: 150px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.categorybox>div:active{
+    color: aqua;
+}
+.categorybox img{
+   
+    margin:auto;
+    width: 60%;
+    height: 60%;
+    margin-top: 17px;
+}

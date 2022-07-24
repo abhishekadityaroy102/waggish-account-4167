@@ -5,9 +5,11 @@ import Donate from '../components/Donate'
 import Home from '../components/Home'
 import Lend from '../components/Lend'
 import Login from '../components/Login'
+import Paymentpage from '../components/Paymentpage'
 import Pricing from '../components/Pricing'
 import Startfund from '../components/Startfund'
 import Donatenow from '../DonateNow/Donatenow'
+import PrivateRoutes from './PrivateRoutes'
 const Allroutes = () => {
   return (
     <Routes>
@@ -19,6 +21,8 @@ const Allroutes = () => {
         <Route path="/startfund" element={<Startfund/>}></Route>
         <Route path="/contact" element={<Contatct/>}></Route>
         <Route path="/login" element={<Login/>}></Route>
+       <Route path="/paymentpage" element={<PrivateRoutes><Paymentpage/></PrivateRoutes>}></Route>
+        
         
     </Routes>
   )

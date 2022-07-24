@@ -1,0 +1,42 @@
+
+.mainbox{
+ width: 80%;
+ display: flex;
+ margin: auto;
+ height: 500px;
+ justify-content: space-between;
+ margin-top: 150px;
+}
+
+.millap{
+    background-color: rgb(235, 238, 241);
+    width: 30%;
+    border-radius: 8px;
+   
+    box-shadow: rgba(26, 26, 78, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.loginpage{
+    border-radius: 8px;
+    width: 50%;
+    /* border: 1px solid black; */
+    height: 500px;
+    margin:auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.loginpage input{
+    width: 70%;
+
+}
+.millapimg{
+    width: 200px;
+    
+margin: auto;
+    margin-top: 100px;
+}
+.millapimg img{
+    width: 150px;
+    height: 150px;
+    border:1px solid red;
+    border-radius: 50%;
+    margin:auto;
+}

@@ -1,6 +1,8 @@
 const initalvalue={
     data:[],
-    donatedata:[]
+    donatedata:[],
+    user:true,
+    Auth:false,
 }
 export const Reducer=(state=initalvalue,{type,payload})=>{
     console.log("reducer data",payload,type)
@@ -22,7 +24,21 @@ export const Reducer=(state=initalvalue,{type,payload})=>{
                 ...state,donatedata:[payload]
             }
         }
-        
+        case "handleuser":{
+            return {
+                ...state,user:false
+            }
+        }
+        case "handlelogin":{
+            return{
+                ...state,user:true
+            }
+        }
+        case "handleauth":{
+            return {
+                ...state,Auth:true
+            }
+        }
         default:return state
     }
 }

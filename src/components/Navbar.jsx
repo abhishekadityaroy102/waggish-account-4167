@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import {RemoveScroll} from "react-remove-scroll"
-import { Tabs, TabList, TabPanels, Tab, TabPanel, Box } from '@chakra-ui/react'
+import { Tabs, TabList, TabPanels, Tab, TabPanel, Box, useDisclosure, Popover, PopoverTrigger, PopoverContent, PopoverArrow, PopoverCloseButton, PopoverHeader, PopoverBody, HStack, Center, Divider, Text, Button, Spacer } from '@chakra-ui/react'
 import Allroutes from '../Routes/Allroutes'
 import { NavLink } from 'react-router-dom'
 import styles from "../Styles/Navbar.module.css"
 import Search from './Search'
 import { FaBeer, FaPiggyBank, FaRegUserCircle, FaSearch, FaUserAlt } from 'react-icons/fa';
 import { useDispatch } from 'react-redux'
+import User from '../Modal/User'
 const active = {
     backgroundColor: "brown",
     color:"rgb(197, 189, 189)",
@@ -27,11 +28,18 @@ const active = {
     
     textDecoration: "none"
   };
+
 const stylesnav = ({ isActive }) => (isActive ? active : base);
 const Navbar = () => {
   const dispatch=useDispatch()
+  const { onOpen, onClose, isOpen } = useDisclosure()
     const [search,setsearch]=useState(false)
     const [query,setquery]=useState(false)
+    const loginupdate=()=>{
+      setquery(false),setsearch(false)
+      // alert("I am login")
+    }
+    
   return (
    <div className={styles.main}>
      <div className={styles.navbar}>
@@ -57,8 +65,31 @@ const Navbar = () => {
             </div>
       
            <div className={styles.user}>
-               <NavLink style={{marginTop:"30px"}} to="/login" onClick={()=>{setquery(false),setsearch(false)}}><FaRegUserCircle style={{fontSize:"40px"}}/></NavLink>
+               <NavLink style={{marginTop:"30px"}} to="/login" onClick={()=>loginupdate()}>
+               {/* <Popover placement="bottom-end">
+    <PopoverTrigger>
+      <Button variant="ghost" ><FaRegUserCircle style={{fontSize:"40px"}}/></Button>
+      
+    </PopoverTrigger>
+    <PopoverContent>
+      <PopoverArrow />
+      <PopoverCloseButton />
+      
+      <PopoverBody bgColor="burlywood" color="whitesmoke">
+        <HStack>
+        <Text onClick={()=>handleloginpage}>Login</Text>
+        <Center height='50px'>
+  <Divider orientation='vertical'  />
+</Center>
+        <Text onClick={()=>handle}>Register</Text>
+        </HStack>
+      </PopoverBody>
+    </PopoverContent>
+  </Popover> */}
+                <User onOpen={onOpen}/>
+                </NavLink>
           </div>
+          
         </div>
     <div>{
  query&& search ? <Search/>:<div></div>

@@ -15,3 +15,12 @@ export const Getupdateamount=(id,dispatch,amount)=>{
       updatedata(id,amount).then((res)=>dispatch({type:"Getid",payload:res.data}))
       
 }
+export const Handleloginaction=(dispatch)=>{
+      dispatch({type:"handlelogin"})
+}
+export const Handleregisteraction=(dispatch)=>{
+      dispatch({type:"handleuser"})
+}
+export const HandleAuthaction=(dispatch)=>{
+      dispatch({type:"handleauth"})
+}

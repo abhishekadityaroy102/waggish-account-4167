@@ -25,9 +25,11 @@ import {
   } from '@chakra-ui/react'
 import { Getupdateamount } from '../Redux/Action'
 import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 const Modalbox = ({el,finalRef,isOpen,onClose}) => {
   const [amount,setamount]=useState(100)
   const dispatch=useDispatch()
+  const navigate=useNavigate()
   // if(amount<100){
     
   //   setamount(100)
@@ -38,7 +40,9 @@ const Modalbox = ({el,finalRef,isOpen,onClose}) => {
     }
     else{
       // console.log("modal",el.id)
+      navigate("/paymentpage")
       Getupdateamount(el.id,dispatch,Number(el.Total_amount)+Number(amount))
+
     }
   }
   return (

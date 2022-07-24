@@ -30,7 +30,7 @@ const Home = () => {
         data1.map((el)=><Containerbox el={el}/>)
       }
      </div>
-     <Donatenow/>
+    
     </div>
   )
 }

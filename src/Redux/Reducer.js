@@ -22,6 +22,7 @@ export const Reducer=(state=initalvalue,{type,payload})=>{
                 ...state,donatedata:[payload]
             }
         }
+        
         default:return state
     }
 }

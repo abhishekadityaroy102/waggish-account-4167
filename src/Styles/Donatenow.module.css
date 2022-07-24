@@ -1,0 +1,162 @@
+.cardscroll{
+width: 600px;
+box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.flexcard{
+    width: 90%;
+
+    display: flex;
+    margin:auto;
+    margin-top: 100px;
+    gap:100px;
+    justify-content: space-between;
+
+}
+.donatecard{
+ 
+    width: 400px;
+    height: fit-content;
+    display: block;
+    /* position: static; */
+    overflow: hidden;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+  
+  .donatecard::-webkit-scrollbar {
+   
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+.progress{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: start;
+}
+.whatsapp{
+    display: flex;
+    gap:30px;
+    justify-content: space-evenly;
+    padding-bottom: 15px;
+   
+}
+.whatsapp button{
+    width:250px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: greenyellow;
+}
+
+.createdbox{
+   display: flex;
+   justify-content: space-between;
+   width: 95%;
+   margin:auto;
+   gap:"15px";
+   height: fit-content;
+  
+}
+.createdbox>div{
+    width: 47%;
+    text-align: start;
+    background-color: antiquewhite;
+}
+.createdbox img{
+    width: 60px;
+    height: 60px;
+    /* background-color: brown; */
+    border-radius: 50%;
+    border:2px solid rgb(73, 46, 9)
+}
+.storyupdates{
+    display: flex;
+    margin:auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    
+    justify-content: space-around;
+}
+.storyupdates>div{
+    width: 46%;
+    /* border:1px solid black; */
+    border-radius: 20px;
+    height: 40px;
+    
+    background-color:beige;
+}
+.storyupdates>div:active{
+    background-color: brown;
+    color:white;
+}
+.storypage{
+    width:90%;
+   
+    margin:auto;
+    text-align: justify;
+    height:fit-content;
+}
+.createname{
+ display: flex;
+ border: 1px solid burlywood;
+}
+.fundraise{
+    display: flex;
+    border: 1px solid burlywood;
+}
+.paymentimg{
+    padding-top: 25px;
+    display: flex;
+    gap:5px;
+     margin:auto;
+
+}
+.paymentimg img{
+    width: 76px;
+    height: 50px;
+    border-radius: 50%;
+}
+.qrimage img{
+  width: 70%;
+  margin:auto;
+}
+.warrantylogo img{
+width: 100px;
+
+}
+.warrantylogo{
+    display: flex;
+    text-align: end;
+    padding: 20px
+
+}
+.warrantylogo>p{
+    padding: 20px;
+}
+.donatebutton button{
+     width: 300px;
+     height:40px;
+     font-size: large;
+     text-align: center;
+     border-radius: 21px;
+     color:white;
+     background-color: brown;
+}
+.progressdonate{
+    display: flex;
+    text-align: start;
+    padding: 24px;
+   
+}
+.progressdonate p{ 
+    padding-top: 10px;
+  padding-left: 20px;
+}
+.progressdonate h2{
+    padding-top: 10px;
+    padding-left: 20px;
+    
+    margin-right: -15px;
+}
